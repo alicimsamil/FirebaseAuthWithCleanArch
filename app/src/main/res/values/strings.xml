@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FirebaseAuthWithCleanArch</string>
+    <string name="facebook_app_id">244950614387601</string>
+    <string name="fb_login_protocol_scheme">fb244950614387601</string>
+    <string name="default_web_client_id_X">299010630347-t4b8p50djfc2r80fmpctjb5lv5mci3e8.apps.googleusercontent.com</string>
+    <string name="welcome">Hoşgeldiniz!</string>
+    <string name="login_screen">login_screen</string>
+    <string name="main_screen">main_screen</string>
+</resources>

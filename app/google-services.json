@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "299010630347",
+    "project_id": "fir-authwithcleanarch",
+    "storage_bucket": "fir-authwithcleanarch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299010630347:android:98f870a0fb2fbb3db1714e",
+        "android_client_info": {
+          "package_name": "com.alicimsamil.firebaseauthwithcleanarch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299010630347-0ebimgbmcr2ocbho55m72h6snvtdhl43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alicimsamil.firebaseauthwithcleanarch",
+            "certificate_hash": "5ae70c11496f040b21aac7428606aa24f89d6742"
+          }
+        },
+        {
+          "client_id": "299010630347-t4b8p50djfc2r80fmpctjb5lv5mci3e8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHsSwsQ2vzBBhZ1ywg5btgG_4yxlWeWGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299010630347-t4b8p50djfc2r80fmpctjb5lv5mci3e8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
