@@ -1,9 +1,9 @@
-package com.alicimsamil.firebaseauthwithcleanarch.data.firebase.firebasesocial
+package com.alicimsamil.firebaseauthwithcleanarch.data.firebase
 
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseUser
 
-interface FirebaseSocialLoginSource {
+interface FirebaseAuthLoginSource {
 
     suspend fun loginWithCredential(authCredential: AuthCredential) : FirebaseUser?
 

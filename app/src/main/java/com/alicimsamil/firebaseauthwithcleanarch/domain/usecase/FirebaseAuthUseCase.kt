@@ -8,7 +8,7 @@ import com.google.firebase.auth.FirebaseAuthException
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class FirebaseSocialUseCase @Inject constructor(private val firebaseRepository: FirebaseRepository) {
+class FirebaseAuthUseCase @Inject constructor(private val firebaseRepository: FirebaseRepository) {
     suspend operator fun invoke(authCredential: AuthCredential)= flow{
 
         emit(FirebaseAuthenticationResult.InProgress(AuthenticationState.IN_PROGRESS))
