@@ -71,6 +71,7 @@ dependencies {
     //Hilt
     implementation("com.google.dagger:hilt-android:2.38.1")
     kapt("com.google.dagger:hilt-android-compiler:2.38.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0-rc01")
 
     //Firebase
     implementation platform('com.google.firebase:firebase-bom:29.0.1')
@@ -86,9 +87,6 @@ dependencies {
 
     //Google Sign-In
     implementation 'com.google.android.gms:play-services-auth:20.0.0'
-
-    //HiltViewModel
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0-rc01")
 
     //Jetpack Compose Navigation
     implementation("androidx.navigation:navigation-compose:2.4.0-rc01")

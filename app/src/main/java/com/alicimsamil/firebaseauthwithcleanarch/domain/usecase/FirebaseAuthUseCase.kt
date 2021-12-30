@@ -10,29 +10,15 @@ import javax.inject.Inject
 
 class FirebaseAuthUseCase @Inject constructor(private val firebaseRepository: FirebaseRepository) {
     suspend operator fun invoke(authCredential: AuthCredential)= flow{
-
         emit(FirebaseAuthenticationResult.InProgress(AuthenticationState.IN_PROGRESS))
-
         try {
-
             firebaseRepository.loginWithCredential(authCredential)?.let {
-
                 emit(FirebaseAuthenticationResult.Success(AuthenticationState.AUTHENTICATED))
-
             } ?: run {
-
                 emit(FirebaseAuthenticationResult.Failure(AuthenticationState.UNAUTHENTICATED,null))
-
             }
-
-
-
         } catch (e:FirebaseAuthException){
-
                 emit(FirebaseAuthenticationResult.Failure(AuthenticationState.UNAUTHENTICATED,e))
         }
-
     }
-
-
 }

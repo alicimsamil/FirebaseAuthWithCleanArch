@@ -39,8 +39,6 @@ import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.GoogleAuthProvider
 
 
-private lateinit var googleSignInClient: GoogleSignInClient
-
 @Composable
 fun LoginScreen(navController: NavController) {
     val context = LocalContext.current
@@ -71,7 +69,7 @@ fun LoginScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            Button(onClick = { facebookLogin(context, viewModel) }) {
+            Button(onClick = { facebookLogin(context,viewModel) }) {
 
                 Text(text = "Facebook")
 
@@ -95,10 +93,8 @@ fun LoginScreen(navController: NavController) {
 }
 
 
-private fun facebookLogin(context: Context, viewModel: LoginViewModel) {
+private fun facebookLogin(context: Context,viewModel: LoginViewModel) {
 
-
-    FacebookSdk.sdkInitialize(context)
     val callbackManager = CallbackManager.Factory.create()
     val loginManager = LoginManager.getInstance()
 
@@ -113,17 +109,11 @@ private fun facebookLogin(context: Context, viewModel: LoginViewModel) {
             val credential = FacebookAuthProvider.getCredential(result.accessToken.token)
             viewModel.loginWithCredential(credential)
         }
-
         override fun onCancel() {
-
         }
-
         override fun onError(error: FacebookException) {
-
         }
     })
-
-
 }
 
 
@@ -131,6 +121,7 @@ private fun googleLogin(
     context: Context,
     launcher: ManagedActivityResultLauncher<Intent, ActivityResult>
 ) {
+    lateinit var googleSignInClient: GoogleSignInClient
 
     val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
         .requestIdToken(context.getString(R.string.default_web_client_id_X))

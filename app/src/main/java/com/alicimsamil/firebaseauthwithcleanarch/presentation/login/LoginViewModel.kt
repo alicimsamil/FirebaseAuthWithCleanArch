@@ -19,7 +19,6 @@ class LoginViewModel @Inject constructor(private val firebaseAuthUseCase: Fireba
     var authState = mutableStateOf<FirebaseAuthenticationResult<AuthenticationState>?>(null)
         private set
 
-
     fun loginWithCredential(authCredential: AuthCredential) {
         viewModelScope.launch {
             firebaseAuthUseCase.invoke(authCredential).collect {
@@ -29,5 +28,4 @@ class LoginViewModel @Inject constructor(private val firebaseAuthUseCase: Fireba
             }
         }
     }
-
 }

@@ -7,11 +7,11 @@ import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
-class FirebaseAuthLoginSourceProvider @Inject constructor(private val firebaseAuth: FirebaseAuth) :
+class FirebaseAuthLoginSourceProvider @Inject constructor(private val firebaseAuthInstance: FirebaseAuth) :
     FirebaseAuthLoginSource {
     override suspend fun loginWithCredential(authCredential: AuthCredential): FirebaseUser? {
-        firebaseAuth.signInWithCredential(authCredential).await()
-        return firebaseAuth.currentUser ?: throw FirebaseAuthException("","")
+        firebaseAuthInstance.signInWithCredential(authCredential).await()
+        return firebaseAuthInstance.currentUser ?: throw FirebaseAuthException("","")
     }
 
 }

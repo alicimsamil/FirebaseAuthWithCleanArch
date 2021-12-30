@@ -15,15 +15,11 @@ import com.alicimsamil.firebaseauthwithcleanarch.R
 
 @Composable
 fun MainScreen() {
-
-
     Scaffold(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
     ) {
-
-
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
@@ -33,9 +29,5 @@ fun MainScreen() {
             Text(text = LocalContext.current.getString(R.string.welcome))
 
         }
-
-
     }
-
-
 }
